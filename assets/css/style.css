@@ -1,0 +1,322 @@
+@font-face {
+	font-family: 'Conv_MyriadPro-Regular';
+	src: url('../css/fonts/MyriadPro-Regular.eot');
+	src: local('☺'), url('../css/fonts/MyriadPro-Regular.woff') format('woff'), url('../css/fonts/MyriadPro-Regular.ttf') format('truetype'), url('../css/fonts/MyriadPro-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*----------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------------------------------------------*/
+
+
+html, body {
+	height:100%;
+	overflow: auto;
+}
+
+.container-fluid {
+	background: url("../images/background.jpg") no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height:100%;
+}
+
+.pad0 {
+	padding:0 !important;
+}
+
+.mar0 {
+	margin:0;
+}
+
+.logo{
+	padding-left: 2%;
+	padding-top: 2%;
+}
+
+.festive_2 {
+	padding-top: 50px;
+}
+
+.orange-box {
+	background: #ec9666;
+}
+
+.yellow_box {
+	background: #f1c65d;
+}
+
+.form-inner-container {
+	width:80%;
+	margin: 0 auto;
+}
+
+.form-container {
+	padding-top: 50px;
+}
+
+.head_text{
+	color:#fff;
+	font-size:18px;
+	text-align:left;
+	font-family: 'Conv_MyriadPro-Regular';
+	padding:3%;
+	width: 100%;
+	background:#f5618a;
+	margin: 0 !important;
+}
+
+.subhead_text {
+	color:#fff;
+	font-size:18px;
+	text-align:left;
+	font-family: 'Conv_MyriadPro-Regular';
+	padding-top:5%;
+	padding-bottom:3%;
+	width: 100%;
+}
+
+textarea {
+	resize:none;
+}
+
+.form-control {
+	margin-bottom: 5px;
+	font-family: 'Conv_MyriadPro-Regular';
+}
+
+
+input[type=submit] {
+	background: #bb285a;
+	border:none;
+	color:#fff;
+	font-family: 'Conv_MyriadPro-Regular';
+	font-size: 20px !important;
+}
+
+.thank-you {
+	width: 80%;
+	max-width: 600px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	top:0;
+	margin: auto;
+}
+
+/* medium+ screen sizes */
+@media (min-width:992px) {
+    .desktop-only {
+        display:block !important;
+    }
+}
+ 
+/* small screen sizes */
+@media (max-width: 991px) {
+
+	.festive_1 {
+		margin-top: 40px;
+	}
+}
+
+
+/*
+.register{
+	height: 85%;
+	position: absolute;
+	right: 3%;
+	top: 7%;
+}
+
+.band{
+	position:absolute;
+	right:0;
+}
+
+.stand_cover{
+	position: absolute;
+	top: 14%;
+	left: 19%;
+}
+
+input[type=text], textarea {
+	height: 25px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+
+.tab1{
+	position: absolute;
+	top: 8%;
+	left: 44%;
+}
+
+.dance{
+	position: absolute;
+	bottom: 27%;
+	left: 5%;
+}
+
+.tablets{
+	position: absolute;
+	bottom: 18%;
+	left: 25%;
+}
+
+.reg_middle{
+	background:#ec9666;
+}
+
+.product_text{
+	color:#fff;
+	font-size:15px;
+	font-family: 'Conv_MyriadPro-Regular';
+}
+
+.contact_text{
+	color:#fff;
+	font-size:15px;
+	font-family: 'Conv_MyriadPro-Regular';
+}
+
+.reg_submit{
+	background:#f1c65d;
+	
+}
+
+.submit_btn{
+	background: #bb285a;
+	color: #fff;
+	outline: none;
+	border: none;
+	padding: 2%;
+	margin-left: 72%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-family: 'Conv_MyriadPro-Regular';
+	text-align:center;
+}
+
+.asus_dual{
+	position:absolute;
+	bottom: 18%;
+	left: 3%;
+}
+
+.tab_phone{
+	position:absolute;
+	bottom:5%;
+	left:4%;
+}
+
+.mt5{
+	margin-top:5px;
+}
+
+.mar_t10{
+	margin-top:10px;
+}
+
+.ml5{
+	margin-left:5%;
+}
+
+.thank{
+	position:absolute;
+	bottom: 0;
+	left: 30%;
+	
+}
+
+.dop{
+	font-family: 'Conv_MyriadPro-Regular';
+	color:#fff;
+	font-size:15px;
+}
+
+.ml-5{
+	margin-left:-8%;
+}
+
+label.error { 
+   float: left;
+   color: white;
+   font-style: italic; 
+   padding-left: .5em;
+   vertical-align: top; 
+   display: block;
+}​	
+*/
+
+
+/*
+.error {
+
+	position:fixed !important;
+  height:15px;
+  background-color:#FFFE36;
+  border:1px solid #E1E16D;
+  font-size:11px;
+  color:#000;
+  padding:3px 10px;
+  margin-left:-2px;
+ 
+
+  /* CSS3 spicing for mozilla and webkit */
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius-bottomleft:0;
+  -moz-border-radius-topleft:0;
+  -webkit-border-bottom-left-radius:0;
+  -webkit-border-top-left-radius:0;
+ 
+  -moz-box-shadow:0 0 6px #ddd;
+  -webkit-box-shadow:0 0 6px #ddd;
+}
+*/
