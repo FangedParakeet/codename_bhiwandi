@@ -2,6 +2,7 @@
 <link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon">
 
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
 <!-- bootstrap 3.0.2 -->
 <link href="<?php echo base_url(); ?>assets/uikit/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <!-- font Awesome -->

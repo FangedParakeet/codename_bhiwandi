@@ -22,10 +22,11 @@ class Home extends CI_Controller {
 	
 
 	function index(){
+		$team = $this->cModel->getByField('teams', 'id', $this->team);
 		$data = array(
 			'uid' => $this->uid,
 			'uname' => $this->uname,
-			'team' => $this->team,
+			'team' => $team['name'],
 			'type' => $this->type,
 			'first_name' => $this->first_name,
 			'last_name' => $this->last_name
