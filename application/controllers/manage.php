@@ -1,7 +1,7 @@
 <?php
 
 class Manage extends CI_Controller {
-	//wutup, Saba
+
 	private $cModel;
 	function __construct() {
 		parent::__construct();

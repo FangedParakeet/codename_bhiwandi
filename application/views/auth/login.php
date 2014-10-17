@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?=$this->config->item('admin_app_name')?> login page</title>
+        <title><?=$this->config->item('admin_app_name')?> Login Page</title>
         <meta name="author" content="Amit Shah" />
-        <meta name="description" content="Asus-fonepad Dashboard" />
-        <meta name="application-name" content="Asus-fonepad Dashboard" />
+        <meta name="description" content="Bhiwandi Dashboard" />
+        <meta name="application-name" content="Bhiwandi Dashboard" />
     
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,8 +22,8 @@
             <div><?php echo $message;?></div>
             
             <div class="login-form">
-                <form class="form-horizontal" action="<?php echo base_url()?>auth/login" method="post" id="loginForm" >
-                    <h1>Admin Login</h1>
+                <form class="form-horizontal" action="<?php echo base_url()?>welcome/authorize" method="post" id="loginForm" >
+                    <h1>Welcome to Bhiwandi</h1>
                     <input name="identity" id="identity" type="text" class="text" placeholder="User name" required/>
                     <input name="password" id="password" type="password" class="text" placeholder="Password" required/>
                     <input type="submit" class="submit-login" value="Login" />
