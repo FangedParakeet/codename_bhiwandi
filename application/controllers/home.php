@@ -22,7 +22,15 @@ class Home extends CI_Controller {
 	
 
 	function index(){
-		echo 'Welcome to Bhiwandi, '.$this->first_name;
+		$data = array(
+			'uid' => $this->uid,
+			'uname' => $this->uname,
+			'team' => $this->team,
+			'type' => $this->type,
+			'first_name' => $this->first_name,
+			'last_name' => $this->last_name
+		);
+		$this->load->view('home/index', $data);
 	}
 
 
