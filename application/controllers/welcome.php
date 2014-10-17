@@ -35,6 +35,17 @@ class Welcome extends CI_Controller {
 		
 		$login = $this->cModel->searchFor('users', array('username' => $user, 'password' => md5($pass)));
 		if( count($login) > 0){
+			$user = $login[0];
+			$userdata = array(
+				'logged_in' => true,
+				'uid' => $user['id'],
+				'uname' => $user['username'],
+				'team' => $user['team'],
+				'type' => $user['type'],
+				'first_name' => $user['first_name'],
+				'last_name' => $user['last_name']
+			);
+			$this->session->set_userdata($userdata);
 			redirect('home', 'refresh');
 		}
 		else {
@@ -42,6 +53,11 @@ class Welcome extends CI_Controller {
 			redirect('/', 'refresh');
 		}
 		
+	}
+	
+	public function logout(){
+		$this->session->sess_destroy();
+		$redirect('/', 'refresh');
 	}
 
 }
