@@ -42,7 +42,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-right">
-                                <a href="<?php echo base_url('welcome/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="<?php echo base_url(); ?>index.php/home/logout" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>

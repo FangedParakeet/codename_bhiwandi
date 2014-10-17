@@ -33,7 +33,13 @@ class Home extends CI_Controller {
 		);
 		$this->load->view('home/index', $data);
 	}
-
+	
+	public function logout(){
+		$this->session->userdata = array();
+		$this->session->sess_destroy();
+		redirect('welcome', 'refresh');
+	}
+	
 
 
 

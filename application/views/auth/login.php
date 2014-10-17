@@ -8,7 +8,8 @@
         <meta name="author" content="Amit Shah" />
         <meta name="description" content="Bhiwandi Dashboard" />
         <meta name="application-name" content="Bhiwandi Dashboard" />
-    
+		<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.ico" type="image/x-icon">
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
