@@ -52,10 +52,10 @@
                 <!-- TO DO List -->
                 <div class="box box-primary">
 												<div class="box-header">
-                    <h3 class="box-title">Quick Example</h3>
+                    <h3 class="box-title">Add Activity</h3>
                   </div>														
 												<div class="" id="">
-														<form action="../../index.html" method="post">
+														<form action="#" method="post">
 																<div class="body bg-gray">
 																	<div class="col-xs-5 form-group">
                                 <label>Start Time</label>
@@ -89,13 +89,7 @@
                             </div>
 																	<div class="col-xs-4 form-group">
                               <label>Activity Done</label>
-                                <select class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>	
+                                <input type="text" class="form-control" placeholder="Remarks">
                             </div>		
 																	<div class="col-xs-4 form-group">
 																			<label>Remarks</label>																																								
