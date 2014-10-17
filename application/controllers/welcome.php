@@ -33,7 +33,14 @@ class Welcome extends CI_Controller {
 		$user = $_POST['identity'];
 		$pass = $_POST['password'];
 		
-		
+		$login = $this->cModel->searchFor('users', array('username' => $user, 'password' => md5($pass)));
+		if( count($login) > 0){
+			redirect('home', 'refresh');
+		}
+		else {
+			$this->session->set_flashdata('message', 'ACCESS DENIED. SECURITY IS ON ITS WAY TO ESCORT YOU FROM THE BUILDING.');
+			redirect('/', 'refresh');
+		}
 		
 	}
 
