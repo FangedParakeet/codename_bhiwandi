@@ -48,134 +48,14 @@
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">                            
                                           
-
-                <!-- TO DO List -->
-                <div class="box box-primary">
-												<div class="box-header">
-                    <h3 class="box-title">Add Activity</h3>
-                  </div>														
-												<div class="" id="">
-														<form action="#" method="post">
-																<div class="body bg-gray">
-																	<div class="col-xs-5 form-group">
-                                <label>Start Time</label>
-                                <select class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>																						
-                            </div>
-																	<div class="col-xs-5 form-group">
-                                <label>End Time</label>
-                                <select class="form-control">
-                                    <option>option 1</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
-                                </select>	
-                            </div>
-																	<div class="col-xs-4 form-group">
-																		<label>For Client</label>
-																		<select class="form-control">
-																				<option>option 1</option>
-																				<option>option 2</option>
-																				<option>option 3</option>
-																				<option>option 4</option>
-																				<option>option 5</option>
-																		</select>	
-                            </div>
-																	<div class="col-xs-4 form-group">
-                              <label>Activity Done</label>
-                                <input type="text" class="form-control" placeholder="Remarks">
-                            </div>		
-																	<div class="col-xs-4 form-group">
-																			<label>Remarks</label>																																								
-                                <input type="text" class="form-control" placeholder="Remarks">
-                            </div>																					
-																</div>
-																<div class="footer">  
-																		<button type="submit" class="btn bg-olive btn-block">Add to my Timesheet</button>
-																</div>
-														</form>
-												</div>
-											</div><!-- /.box -->
+				<?php $this->load->view('includes/activity_form.php'); ?>
 
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable"> 
 
 
-                <!-- solid sales graph -->
-										<!-- /.box -->                            
-                <!-- Calendar -->
-                <div class="box box-solid bg-green-gradient">
-                    <div class="box-header">
-                        <i class="fa fa-calendar"></i>
-                        <h3 class="box-title">Calendar</h3>
-                        <!-- tools box -->
-                        <div class="pull-right box-tools">
-                            <!-- button with a dropdown -->
-                            <div class="btn-group">
-                                <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                                <ul class="dropdown-menu pull-right" role="menu">
-                                    <li><a href="#">Add new event</a></li>
-                                    <li><a href="#">Clear events</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">View calendar</a></li>
-                                </ul>
-                            </div>
-                            <button class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                            <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>                                        
-                        </div><!-- /. tools -->
-                    </div><!-- /.box-header -->
-                    <div class="box-body no-padding">
-                        <!--The calendar -->
-                        <div id="calendar" style="width: 100%"></div>
-                    </div><!-- /.box-body -->  
-                    <div class="box-footer text-black">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <!-- Progress bars -->
-                                <div class="clearfix">
-                                    <span class="pull-left">Task #1</span>
-                                    <small class="pull-right">90%</small>
-                                </div>
-                                <div class="progress xs">
-                                    <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                                </div>
-
-                                <div class="clearfix">
-                                    <span class="pull-left">Task #2</span>
-                                    <small class="pull-right">70%</small>
-                                </div>
-                                <div class="progress xs">
-                                    <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                                </div>
-                            </div><!-- /.col -->
-                            <div class="col-sm-6">
-                                <div class="clearfix">
-                                    <span class="pull-left">Task #3</span>
-                                    <small class="pull-right">60%</small>
-                                </div>
-                                <div class="progress xs">
-                                    <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                                </div>
-
-                                <div class="clearfix">
-                                    <span class="pull-left">Task #4</span>
-                                    <small class="pull-right">40%</small>
-                                </div>
-                                <div class="progress xs">
-                                    <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                                </div>
-                            </div><!-- /.col -->
-                        </div><!-- /.row -->                                                                        
-                    </div>
-                </div><!-- /.box -->                            
-
+				<?php $this->load->view('includes/calendar.php'); ?>
             </section><!-- right col -->
         </div><!-- /.row (main row) -->
 
