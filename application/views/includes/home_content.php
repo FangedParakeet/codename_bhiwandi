@@ -17,10 +17,10 @@
 
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-lg-4 col-xs-3">
 										<!--blank box space-->
             </div><!-- ./col -->
-            <div class="col-lg-6 col-xs-6">
+            <div class="col-lg-4 col-xs-6">
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
@@ -39,7 +39,7 @@
                     </a>
                 </div>
             </div><!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-lg-4 col-xs-3">
             </div><!-- ./col -->
         </div><!-- /.row -->
 

@@ -4,7 +4,7 @@
     <h3 class="box-title">Add Activity</h3>
   </div>														
 								<div class="" id="">
-										<form action="#" method="post">
+										<form action="<?php echo base_url(); ?>index.php/activities/add" method="post">
 												<div class="body bg-gray">
 													<div class="col-xs-6 form-group">
                 <label>Start Time</label>
@@ -111,11 +111,15 @@
 													<div class="col-xs-4 form-group">
 														<label>For Client</label>
 														<select class="form-control" name="client">
-																<option>option 1</option>
-																<option>option 2</option>
-																<option>option 3</option>
-																<option>option 4</option>
-																<option>option 5</option>
+																<option value="0">Select client</option>
+																<?php
+																foreach($clients as $client){
+																	?>
+																	<option value="<?php echo $client['id']; ?>"><?php echo ucfirst($client['name']); ?></option>
+																	<?php
+																}
+																
+																?>
 														</select>	
             </div>
 													<div class="col-xs-4 form-group">

@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->cModel = new Common_model();
 		if($this->session->userdata('logged_in')){
-			$this->uid = $this->session->userdata('id');
+			$this->uid = $this->session->userdata('uid');
 			$this->uname = $this->session->userdata('uname');
 			$this->team = $this->session->userdata('team');
 			$this->type = $this->session->userdata('type');
@@ -23,14 +23,21 @@ class Home extends CI_Controller {
 
 	function index(){
 		$team = $this->cModel->getByField('teams', 'id', $this->team);
+		$clients = $this->cModel->getAll('clients');
+		$client_info = array();
+		foreach($clients as $key => $client){
+			$client_info[$key] = array('id' => $client['id'], 'name' => $client['name']);
+		}
 		$data = array(
 			'uid' => $this->uid,
 			'uname' => $this->uname,
 			'team' => $team['name'],
 			'type' => $this->type,
 			'first_name' => $this->first_name,
-			'last_name' => $this->last_name
+			'last_name' => $this->last_name,
+			'clients' => $client_info 
 		);
+		
 		$this->load->view('home/index', $data);
 	}
 	
