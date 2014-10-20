@@ -25,7 +25,7 @@
                 <div class="small-box bg-yellow">
                     <div class="inner">
                         <h3>
-                            0/8 hrs
+                            <?php echo $hours; ?>/8 hrs
                         </h3>
                         <p>
                             Time Accounted

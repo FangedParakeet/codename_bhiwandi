@@ -22,9 +22,25 @@ class Home extends CI_Controller {
 	
 
 	function index(){
+		$today = date('Y-m-d');
+		$tomorrow_date = new DateTime('tomorrow');
+		$tomorrow = $tomorrow_date->format('Y-m-d');
+	
+		$criteria = array(
+			'start_date >=' => $today,
+			'end_date <' => $tomorrow
+		);
+		$todays_activities = $this->cModel->searchFor('activities', $criteria);
+		$timeSpent = 0;
+		foreach($todays_activities as $activity){
+			$timeSpent += intval($activity['duration']);
+		}
+		$hoursSpent = round(($timeSpent / 60), 1);
+		
 		$team = $this->cModel->getByField('teams', 'id', $this->team);
 		$clients = $this->cModel->getAll('clients');
 		$client_info = array();
+		
 		foreach($clients as $key => $client){
 			$client_info[$key] = array('id' => $client['id'], 'name' => $client['name']);
 		}
@@ -35,7 +51,8 @@ class Home extends CI_Controller {
 			'type' => $this->type,
 			'first_name' => $this->first_name,
 			'last_name' => $this->last_name,
-			'clients' => $client_info 
+			'clients' => $client_info,
+			'hours' => $hoursSpent 
 		);
 		
 		$this->load->view('home/index', $data);
