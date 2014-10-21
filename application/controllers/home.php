@@ -32,8 +32,21 @@ class Home extends CI_Controller {
 		);
 		$todays_activities = $this->cModel->searchFor('activities', $criteria);
 		$timeSpent = 0;
-		foreach($todays_activities as $activity){
+		$activities = array();
+		foreach($todays_activities as $key => $activity){
 			$timeSpent += intval($activity['duration']);
+			$client = $this->cModel->getByField('clients', 'id', $activity['client_id']);
+			$start = date('g:i a', strtotime($activity['start_date']));
+			$end = date("g:i a", strtotime($activity['end_date']));
+			$duration = round((intval($activity['duration']) / 60), 1);
+			$activities[$key] = array(
+				'client' => $client['name'],
+				'start' => $start,
+				'end' => $end,
+				'duration' => $duration,
+				'description' => $activity['description'],
+				'remarks' => $activity['remarks']
+			);
 		}
 		$hoursSpent = round(($timeSpent / 60), 1);
 		
@@ -52,7 +65,8 @@ class Home extends CI_Controller {
 			'first_name' => $this->first_name,
 			'last_name' => $this->last_name,
 			'clients' => $client_info,
-			'hours' => $hoursSpent 
+			'hours' => $hoursSpent,
+			'activities' => $activities
 		);
 		
 		$this->load->view('home/index', $data);

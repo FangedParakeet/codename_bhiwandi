@@ -21,7 +21,6 @@ $(window).load(function(){
 
 // document ready function
 $(document).ready(function(){ 	
-
 	//prevent font flickering in some browsers 
 	(function(){
 	  //if firefox 3.5+, hide content till load (or 3 seconds) to prevent FOUT
