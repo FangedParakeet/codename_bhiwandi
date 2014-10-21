@@ -1,3 +1,6 @@
+<?php
+    $message = $this->session->flashdata('message');
+?>
 <!-- Right side column. Contains the navbar and content of the page -->
 <aside class="right-side">
 	<!-- Content Header (Page header) -->
@@ -45,6 +48,7 @@
 			<div class="col-lg-4 col-xs-3">
 			</div><!-- ./col -->
 		</div><!-- /.row -->
+        <div style="color:red"><?php echo $message;?></div>
 
 		<!-- Main row -->
 		<div class="row">

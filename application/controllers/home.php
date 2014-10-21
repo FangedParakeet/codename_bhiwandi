@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 			'start_date >=' => $today,
 			'end_date <' => $tomorrow
 		);
-		$todays_activities = $this->cModel->searchFor('activities', $criteria);
+		$todays_activities = $this->cModel->searchForOrderBy('activities', $criteria, 'start_date', 'ASC');
 		$timeSpent = 0;
 		$activities = array();
 		foreach($todays_activities as $key => $activity){

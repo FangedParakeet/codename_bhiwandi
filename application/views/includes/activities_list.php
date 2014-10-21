@@ -42,7 +42,7 @@
 				<?php echo $activity['duration']; ?> hours
 			</div>
 			<div class="progress col-sm-2" style="padding:0">
-				<div class="progress-bar progress-bar-green" style="width: <?php echo (intval($activity['duration']) / $hours) * 100; ?>%;"></div>
+				<div class="progress-bar progress-bar-green" style="width: <?php echo (intval($activity['duration']) / 8) * 100; ?>%;"></div>
 			</div>
 			<?php } ?>
 		</div>

@@ -28,36 +28,52 @@ class Activities extends CI_Controller {
 		$start_hours = $this->input->post('start_hours');
 		$start_mins = $this->input->post('start_mins');
 		$start_date = $today.' '.$start_hours.':'.$start_mins.':00'; // format date to "YYYY-MM-DD HH:MM:SS"
-		
-		$end_hours = $this->input->post('end_hours');
-		$end_mins = $this->input->post('end_mins');
-		$end_date = $today.' '.$end_hours.':'.$end_mins.':00';
-		
-		$hours_diff = (intval($end_hours) - intval($start_hours)) * 60; // difference in hours converted to minutes
-		$mins_diff = intval($end_mins) - intval($start_mins);
-		$duration = $hours_diff + $mins_diff;
-				
-		$client = $this->input->post('client');
-		$descr = $this->input->post('activity');
-		$remarks = $this->input->post('remarks');
-		$data = array(
-			'start_date' => $start_date,
-			'end_date' => $end_date,
-			'duration' => $duration,
-			'client_id' => $client,
-			'user_id' => $uid,
-			'description' => $descr,
-			'remarks' => $remarks
+		$criteria1 = array(
+			'start_date <=' => $start_date,
+			'end_date >=' => $start_date
 		);
+		$start_overlap = $this->cModel->searchFor('activities', $criteria1);
+		if(count($start_overlap) > 0){
+			$this->session->set_flashdata('message', 'Your activity overlaps with an existing activity!');
+		}
+		else {
+			$end_hours = $this->input->post('end_hours');
+			$end_mins = $this->input->post('end_mins');
+			$end_date = $today.' '.$end_hours.':'.$end_mins.':00';
+			$criteria2 = array(
+				'start_date <=' => $end_date,
+				'end_date >=' => $end_date
+			);
+			$end_overlap = $this->cModel->searchFor('activities', $criteria2);
+			if(count($end_overlap) > 0){
+				$this->session->set_flashdata('message', 'Your activity overlaps with an existing activity!');
+			}
+			else {
+				$hours_diff = (intval($end_hours) - intval($start_hours)) * 60; // difference in hours converted to minutes
+				$mins_diff = intval($end_mins) - intval($start_mins);
+				$duration = $hours_diff + $mins_diff;
+				
+				$client = $this->input->post('client');
+				$descr = $this->input->post('activity');
+				$remarks = $this->input->post('remarks');
+				$data = array(
+					'start_date' => $start_date,
+					'end_date' => $end_date,
+					'duration' => $duration,
+					'client_id' => $client,
+					'user_id' => $uid,
+					'description' => $descr,
+					'remarks' => $remarks
+				);
 		
-		$this->cModel->insert('activities', $data);
+				$this->cModel->insert('activities', $data);
+			}
+		
+		}
 		
 		redirect('home', 'refresh');
 		
 	}
-
-
-
-
+	
 
 }
