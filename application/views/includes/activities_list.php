@@ -50,8 +50,17 @@
 			<?php } ?>
 		</div>
 		<div class="footer">  
-			&nbsp;
+			<a href="#" id="submit_report"><button class="btn bg-olive btn-block">Submit Report</button>
 		</div>
 	</form>
 </div>
 </div><!-- /.box -->
+<script>
+	
+	$('#submit_report').click(function(){
+		if(confirm('Are you sure? You can only do this once.')){
+			console.log('you is a gaylord');
+		};
+	});
+
+</script>
